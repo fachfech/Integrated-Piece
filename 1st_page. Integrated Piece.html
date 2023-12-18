@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Integrated Piece</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('123.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+
+        header,
+        section,
+        footer {
+            border-radius: 40px;
+            /* Adjust the border-radius as needed */
+            overflow: hidden;
+            margin: 5px;
+        }
+
+        header {
+            background-color: rgba(6, 8, 56, 0.895);
+            color: #c7c7c7;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #09154a;
+            overflow: hidden;
+            width: 100%;
+            /* Make the nav full-width */
+        }
+
+        nav a {
+            float: right;
+            display: block;
+            color: rgb(193, 193, 193);
+            text-align: center;
+            
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav {
+            background-color: #05075edf;
+            overflow: hidden;
+            direction: rtl;
+            /* Set text direction to right-to-left */
+            border-radius: 50px;
+           
+            
+        }
+        footer {
+        background-color: #1d0d56;
+        color: #c7c7c7;
+        padding: 5px;
+        text-align: center;
+        width:100%;
+        bottom: 0;
+        position: fixed;
+        
+      
+    }
+
+    
+    
+    
+   
+
+    html {
+    height: 100%;
+}
+section {
+    margin: 5px 0;
+    padding: 40px;
+    /* Adjust the padding as needed */
+    background-color: #252323;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    color: #c8c8c8;
+    width: 1700px;
+}
+
+
+
+.search-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    /* Ensure the search bar stays on top of other elements */
+}
+
+input[type="text"] {
+    
+    padding: 15px;
+    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    box-shadow: 0 0px 8px rgba(1, 9, 242, 0.3);
+    
+      text-align: right;
+    
+}
+
+input[type="submit"] {
+    padding: 15px;
+    cursor: default;
+    background-color: #3e13c0;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #d92a2a;
+}
+
+       
+
+
+        h3 {
+            font-size: 25px;
+        }
+        nav {
+      text-align: right;
+    }
+
+    /* Style for the navigation bar items */
+    nav h3 {
+      display: inline-block;
+      margin: 0;
+    }
+
+    /* Style for the navigation bar links */
+    nav h3 a {
+      color: #d7d7d7;
+      text-decoration: none;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    /* Change the color on hover */
+    nav h3 a:hover {
+      background-color: #e60000;
+    }
+    ul li ul.dropdown li{
+width: 100%;
+
+    }
+    
+
+    .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown a {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: #c2c2c2;
+            padding: 10px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            display: inline-block;
+        }
+        .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#1d0d56; /* Darken the background color */
+    min-width: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    z-index: 1;
+    top: 160px; /* Adjust the top value as needed */
+}
+
+.dropdown-content a {
+    color: #ccc; /* Lighten the text color */
+    text-decoration: none;
+    padding: 15px 20px; /* Adjust padding for better spacing */
+    display: block;
+    text-align: right;
+    transition: background-color 0.5s, color 0.5s; /* Add smooth transition effects */
+}
+
+
+
+
+
+
+      
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* Existing styles... */
+
+.dropdown h3 a {
+    font-size: 16px; /* Set the font size for the dropdown link */
+    color: #d7d7d7;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+.dropdown h3 a:hover {
+    background-color: #e60000;
+}
+
+/* Add the following styles to target the specific <h3> containing "القصص" */
+.dropdown h3 a[href=""] {
+    font-size: 25px; /* Set the font size for "القصص" */
+}
+
+/* Existing styles... */
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <em>
+            <h1>INTEGRATED PIECE | قطع مدمجة</h1>
+        </em>
+    </header>
+   
+   <!-- Inside the <nav> tag -->
+<!-- Inside the <nav> tag -->
+    <nav>
+        <h3><a href="1st_page. Integrated Piece.html">الرئيسية</a></h3>
+        <div class="dropdown"> <!-- Corrected here -->
+            <h3><a href="">القصص</a></h3>
+            <div class="dropdown-content">
+                <h3><a href="الشجرة الاخيرة.html">الشجرة الأخيرة</a></h3>
+                <!-- Add more stories as needed -->
+            </div>
+        </div> <!-- Corrected here -->
+        <h3><a href="#المانغا">المانغا</a></h3>
+        <h3><a href="#الحلقات المدبلجة">الحلقات الامدبلجة</a></h3>
+    </nav>
+    
+    
+    
+    
+       
+    <!-- Add more sections as needed -->
+
+    <footer>
+        &copy; 2023-Integrated Piece
+    </footer> 
+    <div class="search-container">
+        <input type="text" name="query" placeholder="..........البحث">
+        <input type="submit" value="ابحث">
+    </div>
+
+    <!-- Enhanced Search Bar -->
+ 
+</body>
+</html>
