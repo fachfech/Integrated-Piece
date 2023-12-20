@@ -7,103 +7,300 @@
     <link rel="stylesheet" href="styles.css">
     <title>Integrated Piece</title>
     <style>
-      body {
-    font-family: Arial, sans-serif;
+p a {
+        color: #b1b1b1;
+        text-decoration: none;
+        position: relative;
+        padding-left: 20px;
+        margin-right: 20px; /* Adjust the spacing between links */
+    }
+
+    p a::before {
+    content: "";
+    width: 19px; /* Adjust the width as needed */
+    height: 19px; /* Adjust the height as needed */
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 5px;
+}
+
+
+    p a.icon1::before {
+        background: url('telegram.png') center/cover; /* Replace 'photo1.png' with the path to your first photo */
+    
+    }
+
+    p a.icon2::before {
+        background: url('facebook.png') center/cover; /* Replace 'photo2.png' with the path to your second photo */
+    }
+
+    p a.icon3::before {
+        background: url('instagram.png') center/cover; /* Replace 'photo3.png' with the path to your third photo */
+    }
+
+    p a.icon4::before {
+        background: url('Twitter-Symbole.png') center/cover; /* Replace 'photo4.png' with the path to your fourth photo */
+    }
+
+    p a.icon5::before {
+        background: url('tiktok.png') center/cover; /* Replace 'photo5.png' with the path to your fifth photo */
+    }
+
+    p a:hover {
+        color: #ff0000;
+    }
+
+        body {
+            background-image: url('wallpaperflare.com_wallpaper (7).jpg');
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #252323;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background-image: url('123.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
 }
 
-header,
-section,
-footer {
-    border-radius: 40px;
-    overflow: hidden;
-    margin: 5px;
-}
+#section1 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-header {
-    background-color: rgba(6, 8, 56, 0.895);
-    color: #c7c7c7;
-    padding: 10px;
-    text-align: center;
-}
+        #section1 .card {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
 
-nav {
-    background-color: #09154a;
-    overflow: hidden;
-    width: 100%;
-}
+        #section1 .card:hover {
+            transform: scale(1.1);
+        }
 
-nav a {
-    float: right;
-    display: block;
-    color: rgb(193, 193, 193);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+        #section1 .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
 
-nav {
-    background-color: #05075edf;
-    overflow: hidden;
-    direction: rtl;
-    border-radius: 50px;
-}
+        #section1 .card-content {
+            padding: 16px;
+        }
 
-footer {
-    background-color: #1d0d56;
-    color: #c7c7c7;
-    padding: 5px;
-    text-align: center;
-    width: 100%;
-    bottom: 0;
-    position: fixed;
-}
+        #section1 h3 {
+            margin-top: 0;
+            color: #333;
+        }
 
-html {
-    height: 100%;
-}
+        #section1 p {
+            color: #666;
+        }
 
 section {
     margin: 5px 0;
     padding: 40px;
-    background-color: #252323;
-    box-shadow: 0 0 20px rgb(0, 0, 0);
+    /* Adjust the padding as needed */
+    background-color: #c6c6c6;
+    
+    box-shadow: 0 0 0px rgb(0, 0, 0);
     color: #c8c8c8;
-    width: 100%;
+    width: 1700px;
 }
+
+#section1 {
+    position: relative;
+    margin: 5px 0;
+    padding: 40px;
+    background:linear-gradient(to bottom, #040409, #343434);
+    height: 50%;
+    color: #c8c8c8;
+    width: 50%;
+    margin-left: auto;
+    top: 1%; /* Adjust the top position as needed */
+    border-radius: 40px;
+    
+}
+
+section#section2 {
+    
+    background:linear-gradient(to bottom, #040409, #071255);
+    width: 95.8%;
+    height: 41%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: right;
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    margin-bottom: -800px; /* Adjust margin as needed */
+}
+#section3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom, #040409, #343434);
+    height: 50%;
+    color: #c8c8c8;
+    width: 50%;
+    margin-left: auto;
+    top: 80%;
+    /* Adjust the top position in pixels as needed */
+    border-radius: 40px;
+}
+#section3 .story {
+    width: 150px;
+    height: 200px; /* Adjust the height as needed */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+#section3 img {
+    width: 100%;
+    height: auto;
+    /* Remove or adjust the border-bottom property */
+    /* border-bottom: 1px solid #ddd; */
+}
+
+#section3 .story:hover {
+    transform: scale(1.1);
+}
+
+#section3 h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+#section3 p {
+    color: #666;
+}
+
+
+
+        header {
+            border-radius: 40px;
+            overflow: visible;
+            margin: 5px;
+        }
+
+        header {
+            background:linear-gradient(to bottom, #111221, #071255);
+            background-color: rgba(6, 8, 56, 0.577);
+            color: #c7c7c7;
+            padding: 10px;
+            text-align: center;
+                font-size: 18px;
+            
+        }
+
+        nav {
+    background:linear-gradient(to bottom, #111221, #0218a3);
+    direction: rtl;
+    border-radius: 50px;
+    text-align: right;
+    overflow: visible;
+    width: 100%;
+    margin: 0;  /* Remove margin */
+    padding: 0; /* Remove padding */
+    box-sizing: border-box;
+}
+
+
+        nav a {
+            float: right;
+            display: block;
+            color: rgb(193, 193, 193);
+            text-align: center;
+            
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+       
+        h3 {
+            font-size: 25px;
+        }
+    
+
+    /* Style for the navigation bar items */
+    nav h3 {
+      display: inline-block;
+      margin: 0;
+    }
+
+    /* Style for the navigation bar links */
+    nav h3 a {
+      color: #d7d7d7;
+      text-decoration: none;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    /* Change the color on hover */
+    nav h3 a:hover {
+        background:linear-gradient(to bottom, #030325, #f60000);
+    }
+    
+
+
+/* Add any additional styles as needed */
 
 .search-container {
     position: fixed;
     top: 10px;
     left: 10px;
     z-index: 1000;
+    /* Ensure the search bar stays on top of other elements */
 }
 
 input[type="text"] {
+    
     padding: 15px;
-    width: 100%; /* Full width on small screens */
+    width: 200px;
     box-sizing: border-box;
     border: 1px solid #000000;
     border-radius: 10px;
     outline: none;
     font-size: 16px;
     box-shadow: 0 0px 8px rgba(1, 9, 242, 0.3);
-    text-align: right;
+    
+      text-align: right;
+    
 }
 
 input[type="submit"] {
     padding: 15px;
     cursor: default;
-    background-color: #3e13c0;
+    background-color: #100074;
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -114,97 +311,172 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #d92a2a;
 }
+     
 
-h3 {
-    font-size: 25px;
-}
+    .dropdown {
+            display: inline-block;
+        }
 
-nav {
-    text-align: right;
-}
-
-nav h3 {
-    display: inline-block;
-    margin: 0;
-}
-
-nav h3 a {
-    color: #d7d7d7;
-    text-decoration: none;
-    padding: 10px;
-    display: inline-block;
-}
-
-nav h3 a:hover {
-    background-color: #e60000;
-}
-
-ul li ul.dropdown li {
-    width: 100%;
-}
-
-.dropdown {
-    display: inline-block;
-}
-
-.dropdown a {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: #c2c2c2;
-    padding: 10px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-    display: inline-block;
-}
-
-.dropdown-content {
+        .dropdown a {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: #c2c2c2;
+            padding: 10px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            display: inline-block;
+        }
+        .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #1d0d56;
-    min-width: 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #333; /* Darken the background color */
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
     z-index: 1;
-    top: 160px;
+    top: 160px; /* Adjust the top value as needed */
 }
 
 .dropdown-content a {
-    color: #ccc;
+    color: #ccc; /* Lighten the text color */
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 15px 20px; /* Adjust padding for better spacing */
     display: block;
     text-align: right;
-    transition: background-color 0.5s, color 0.5s;
+    transition: background-color 0.5s, color 0.5s; /* Add smooth transition effects */
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+
+
+
+
+
+      
+/* Existing styles... */
+/* Existing styles... */
 
 .dropdown h3 a {
-    font-size: 16px;
+    font-size: 16px; /* Set the font size for the dropdown link */
     color: #d7d7d7;
     text-decoration: none;
     padding: 10px;
     display: inline-block;
+    position: relative; /* Set the position to relative for proper positioning of the arrow */
 }
 
 .dropdown h3 a:hover {
     background-color: #e60000;
 }
 
-.dropdown h3 a[href=""] {
-    font-size: 25px;
-}
-
-
 /* Add the following styles to target the specific <h3> containing "القصص" */
 .dropdown h3 a[href=""] {
     font-size: 25px; /* Set the font size for "القصص" */
 }
 
-/* Existing styles... */
+/* Add the arrow using the ::after pseudo-element */
+.dropdown h3 a[href=""]::after {
+    content: "    ▼"; /* Unicode character for down arrow */
+    margin-left: 0px; /* Adjust the margin to increase the spacing between the word and the arrow */
+    font-size: 12px; /* Set the font size for the arrow */
+    color: #c7c7c7;
+}
+
+
+.slider-container {
+    position: absolute;
+    top: 45%;
+    left: 30px;
+    transform: translateY(-50%);
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 40px; /* Added border-radius property */
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+
+        .slide {
+            
+            min-width: 100%;
+            box-sizing: border-box;
+            user-select: none; /* Disable user selection */
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            pointer-events: none; /* Disable pointer events on the image */
+        }
+
+   .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    z-index: 1;
+}
+
+
+
+
+ 
+
+        .arrow:hover {
+            background-color: rgba(80, 0, 0, 0.801);
+        }
+
+        .arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+    left: auto;
+}
+.card {
+    size: 20%; /* This property may not be standard, you might want to clarify its purpose */
+    width: 150px; /* Adjust the width as needed */
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 70%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
 
 
     </style>
@@ -218,28 +490,175 @@ ul li ul.dropdown li {
         </em>
     </header>
    
-   <!-- Inside the <nav> tag -->
-<!-- Inside the <nav> tag -->
+  <!-- Inside the <nav> tag -->
+    
+    
     <nav>
         <h3><a href="1st_page. Integrated Piece.html">الرئيسية</a></h3>
         <div class="dropdown"> <!-- Corrected here -->
             <h3><a href="">القصص</a></h3>
             <div class="dropdown-content">
                 <h3><a href="الشجرة الاخيرة.html">الشجرة الأخيرة</a></h3>
+                <h3><a href="الشجرة الاخيرة.html">الشجرة الأخيرة</a></h3>
+                <h3><a href="الشجرة الاخيرة.html">الشجرة الأخيرة</a></h3>
+                <h3><a href="الشجرة الاخيرة.html">الشجرة الأخيرة</a></h3>
+                <h3><a href="الشجرة الاخيرة.html">الشجرة الأخيرة</a></h3>
+                <h3><a href="الشجرة الاخيرة.html">الشجرة الأخيرة</a></h3>
                 <!-- Add more stories as needed -->
             </div>
         </div> <!-- Corrected here -->
         <h3><a href="#المانغا">المانغا</a></h3>
-        <h3><a href="#الحلقات المدبلجة">الحلقات الامدبلجة</a></h3>
+        <h3><a href="#الحلقات المدبلجة">المونتاج و التصميم</a></h3>
     </nav>
-  
-    <footer>
-        &copy; 2023-Integrated Piece
-    </footer> 
+    
+    
+    
+    
+     
     <div class="search-container">
         <input type="text" name="query" placeholder="..........البحث">
         <input type="submit" value="ابحث">
     </div>
+    
+    <div class="slider-container" onmouseenter="stopAutoSlide()" onmouseleave="startAutoSlide()">
+      <button class="arrow left" onclick="prevSlide()">&#8249;</button>
+      <div class="slider">
+          <div class="slide" draggable="false"><img src="1.jpeg" alt=""></div>
+          <div class="slide" draggable="false"><img src="2.jpg" alt=""></div>
+          <div class="slide" draggable="false"><img src="3.jpg" alt=""></div>
+      </div>
+      <button class="arrow right" onclick="nextSlide()">&#8250;</button>
+  </div>
+  
+  <script>
+      var counter = 0;
+      var totalSlides = 3;
+      var slideInterval;
+  
+      function showSlide() {
+          document.querySelector('.slider').style.transform = 'translateX(' + (-counter * 100) + '%)';
+      }
+  
+      function prevSlide() {
+          counter--;
+          if (counter < 0) {
+              counter = totalSlides - 1;
+          }
+          console.log('Prev: Counter is now ' + counter);
+          showSlide();
+      }
+  
+      function nextSlide() {
+          counter++;
+          if (counter >= totalSlides) {
+              counter = 0;
+          }
+          console.log('Next: Counter is now ' + counter);
+          showSlide();
+      }
+  
+      function startAutoSlide() {
+          slideInterval = setInterval(nextSlide, 5000);
+      }
+  
+      function stopAutoSlide() {
+          clearInterval(slideInterval);
+      }
+  
+      startAutoSlide(); // Start auto slideshow on page load
+       document.getElementById("toggleLink").addEventListener("click", function () {
+        var content = document.getElementById("contentToToggle");
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    });
+    
+  </script>
+
+
+
+
+
+<section id="section2">
+    <h2 style="text-align: right;">
+        <p>كيف يمكنني الانضمام إلى فريق العمل المختص في تطوير قطع مدمجة؟</p>
+        <p>يمكنك زيارة مجموعتنا على تطبيق تليجرام حيث يمكنك الحصول على معلومات حول كيفية الانضمام والتعرف على كل التفاصيل...</p>
+    </h2>
+     
+    <p style="text-align: left;"><a href="https://t.me/Axcemo12" target="_blank" class="icon1">TELEGRAM</a></p>
+    <p style="text-align: left;"><a href="https://www.facebook.com/" target="_blank" class="icon2">Facebook</a></p>
+    <p style="text-align: left;"><a href="https://www.instagram.com/" target="_blank" class="icon3">Instagram</a></p>
+    <p style="text-align: left;"><a href="https://twitter.com/" target="_blank" class="icon4">Twitter</a></p>
+    <p style="text-align: left;"><a href="https://www.tiktok.com/" target="_blank" class="icon5">TikTok</a></p>
+    <h2 style="text-align: left; position: absolute; top: 50px; left: 20px;">
+        تابعونا على منصات التواصل الاجتماعي
+    </h2>
+    
+</section>
+<section id="section1">
+<div class="card">
+    <img src="manga1.avif" alt="Manga 1">
+    <div class="card-content">
+        <h3>Manga Title 1</h3>
+        <p>Description of Manga 1.</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="manga2.webp" alt="Manga 2">
+    <div class="card-content">
+        <h3>Manga Title 2</h3>
+        <p>Description of Manga 2.</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="manga3.jpg" alt="Manga 3">
+    <div class="card-content">
+        <h3>Manga Title 3</h3>
+        <p>Description of Manga 3.</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="manga4.jpg" alt="Manga 4">
+    <div class="card-content">
+        <h3>Manga Title 4</h3>
+        <p>Description of Manga 4.</p>
+    </div>
+</div>
+</section>
+
+<section id="section3">
+    <div class="story">
+        <img src="story1.jpg" alt="Story 1">
+        <h3>Story 1</h3>
+        <p>Description of Story 1.</p>
+    </div>
+    <div class="story">
+        <img src="story2.jpg" alt="Story 2">
+        <h3>Story 2</h3>
+        <p>Description of Story 2.</p>
+    </div>
+    <div class="story">
+        <img src="story3.jpg" alt="Story 3">
+        <h3>Story 3</h3>
+        <p>Description of Story 3.</p>
+    </div>
+    <div class="story">
+        <img src="story4.jpg" alt="Story 4">
+        <h3>Story 4</h3>
+        <p>Description of Story 4.</p>
+    </div>
+</section>
+
+
+
+
+
+
 
 </body>
 </html>
