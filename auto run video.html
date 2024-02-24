@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Play Video</title>
+  <style>
+    /* Your existing styles go here */
+    header video {
+      width: 30%;
+      max-width: 350px;
+      border: 2px solid #1b1919b3;
+      border-radius: 5px;
+      margin: 10px 0;
+      bottom: -1000px;
+      /* Add other styles as needed */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Your HTML structure goes here -->
+
+  <header>
+    <video id="autoplay-video" controls loop muted>
+      <source src="video_2024-02-22_20-43-43.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </header>
+
+  <script>
+    // JavaScript code goes here
+    document.addEventListener("DOMContentLoaded", function() {
+      var video = document.getElementById("autoplay-video");
+
+      var options = {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px",
+        threshold: 0.5 // Play the video when 50% of it is visible
+      };
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            video.play(); // Play the video when it becomes visible
+          } else {
+            video.pause(); // Pause the video when it goes out of view
+          }
+        });
+      }, options);
+
+      observer.observe(video);
+    });
+  </script>
+</body>
+</html>
