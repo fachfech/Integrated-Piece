@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+
+
+    .slider-container {
+position: absolute;
+top: 70%;
+transform: translateY(-50%);
+max-width: 1700px;
+overflow: hidden;
+height: 800px;
+border-radius: 40px; /* Added border-radius property */
+}
+
+
+    .slider {
+        display: flex;
+        transition: transform 1s ease-in-out;
+        width: 300%; /* Adjust the width based on the number of slides */
+    }
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+        user-select: none; /* Disable user selection */
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        pointer-events: none; /* Disable pointer events on the image */
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 20px;
+        transition: background-color 0.3s;
+        z-index: 1;
+    }
+
+    .arrow:hover {
+        background-color: rgba(80, 0, 0, 0.801);
+    }
+
+    .arrow.left {
+        left: 10px;
+    }
+
+    .arrow.right {
+        right: 10px;
+        left: auto;
+    }</style>
+<body>
+      
+    <div class="slider-container" onmouseenter="stopAutoSlide()" onmouseleave="startAutoSlide()">
+        <button class="arrow left" onclick="prevSlide()">&#8249;</button>
+        <div class="slider">
+            <div class="slide" draggable="false"><img src="1.jpeg" alt=""></div>
+            <div class="slide" draggable="false"><img src="2.jpg" alt=""></div>
+            <div class="slide" draggable="false"><img src="3.jpg" alt=""></div>
+        </div>
+        <button class="arrow right" onclick="nextSlide()">&#8250;</button>
+    </div>
+<script>
+    var counter = 0;
+         var totalSlides = 3;
+         var slideInterval;
+     
+         function showSlide() {
+             document.querySelector('.slider').style.transform = 'translateX(' + (-counter * 100) + '%)';
+         }
+     
+         function prevSlide() {
+             counter--;
+             if (counter < 0) {
+                 counter = totalSlides - 1;
+             }
+             console.log('Prev: Counter is now ' + counter);
+             showSlide();
+         }
+     
+         function nextSlide() {
+             counter++;
+             if (counter >= totalSlides) {
+                 counter = 0;
+             }
+             console.log('Next: Counter is now ' + counter);
+             showSlide();
+         }
+     
+         function startAutoSlide() {
+             slideInterval = setInterval(nextSlide, 5000);
+         }
+     
+         function stopAutoSlide() {
+             clearInterval(slideInterval);
+         }
+     
+         startAutoSlide(); // Start auto slideshow on page load
+          document.getElementById("toggleLink").addEventListener("click", function () {
+           var content = document.getElementById("contentToToggle");
+           if (content.style.display === "none") {
+               content.style.display = "block";
+           } else {
+               content.style.display = "none";
+           }
+       });
+        </script>
+</body>
+</html>

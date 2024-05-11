@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Integrated Piece</title>
+    <style>
+p a {
+        color: #b1b1b1;
+        text-decoration: none;
+        position: relative;
+        padding-left: 20px;
+        margin-right: 20px; /* Adjust the spacing between links */
+    }
+
+    p a::before {
+    content: "";
+    width: 19px; /* Adjust the width as needed */
+    height: 19px; /* Adjust the height as needed */
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 5px;
+}
+
+
+    p a.icon1::before {
+        background: url('telegram.png') center/cover; /* Replace 'photo1.png' with the path to your first photo */
+    
+    }
+
+    p a.icon2::before {
+        background: url('facebook.png') center/cover; /* Replace 'photo2.png' with the path to your second photo */
+    }
+
+    p a.icon3::before {
+        background: url('instagram.png') center/cover; /* Replace 'photo3.png' with the path to your third photo */
+    }
+
+    p a.icon4::before {
+        background: url('Twitter-Symbole.png') center/cover; /* Replace 'photo4.png' with the path to your fourth photo */
+    }
+
+    p a.icon5::before {
+        background: url('tiktok.png') center/cover; /* Replace 'photo5.png' with the path to your fifth photo */
+    }
+
+    p a:hover {
+        color: #ff0000;
+    }
+
+        body {
+            background-image: url('wallpaperflare.com_wallpaper (7).jpg');
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #252323;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+   
+    min-height: 100vh;
+}
+
+#section1 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #section1 .card {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #section1 .card:hover {
+            transform: scale(1.1);
+        }
+
+        #section1 .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #section1 .card-content {
+            padding: 16px;
+        }
+
+        #section1 h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        #section1 p {
+            color: #666;
+        }
+
+section {
+    margin: 5px 0;
+    padding: 40px;
+    /* Adjust the padding as needed */
+    background-color: #d5d3d3;
+    
+    box-shadow: 0 0 0px rgb(0, 0, 0);
+    color: #cfcece;
+    width: 1700px;
+}
+
+#section1 {
+    position: relative;
+    margin: 5px 0;
+    padding: 40px;
+    background-color: #252323;
+    height: 50%;
+    color: #d4d4d4;
+    width: 50%;
+    margin-left: auto;
+    top: 1%; /* Adjust the top position as needed */
+    border-radius: 40px;
+    
+}
+
+section#section2 {
+    background:linear-gradient(to bottom, #040409, #071255);
+    width: 95.8%;
+    height: 41%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: right;
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    margin-bottom: -800px; /* Adjust margin as needed */
+}
+
+
+
+nav {
+            width: 1862px;
+            background-color: #000;
+            color: #2f2f2f;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: aqua; /* Crunchyroll's orange color */
+            text-align: center;
+            flex-grow: 1;
+            /* Add this property to make the title take up the remaining space */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.1s ease-in-out;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #cfcfcf;
+            /* Change color on hover */
+        }
+
+        nav i {
+            margin-right: 5px;
+        }
+
+        
+        
+        
+        /* ... (existing styles) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #212121;
+    z-index: 1;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out, opacity 0.3s ease-in-out;
+    position: absolute;
+            top: 185%; /* Position dropdown below the dropdown toggle */
+            left: 0;          
+}
+
+
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+    max-height: 200px; /* Adjust the maximum height as needed */
+}
+
+/* ... (existing styles) */
+      
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content a {
+            color: rgb(207, 207, 207);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: right; 
+        }
+
+        .dropdown-content a:hover {
+            background-color: #000000;
+        }
+        .dropdown.show .dropdown-content {
+            display: block;
+            opacity: 1;
+            max-height: 200px; /* Adjust the maximum height as needed */
+        }
+
+
+
+/* Add any additional styles as needed */
+
+.search-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    /* Ensure the search bar stays on top of other elements */
+}
+
+input[type="text"] {
+    
+    padding: 15px;
+    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    box-shadow: 0 0px 8px rgba(1, 9, 242, 0.3);
+    
+      text-align: right;
+    
+}
+
+input[type="submit"] {
+    padding: 15px;
+    cursor: default;
+    background-color: #100074;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #d92a2a;
+}
+     
+
+ 
+
+.slider-container {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    max-width: 1700px;
+    overflow: hidden;
+    height: 800px;
+    border-radius: 40px; /* Added border-radius property */
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+
+        .slide {
+            
+            min-width: 100%;
+            box-sizing: border-box;
+            user-select: none; /* Disable user selection */
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            pointer-events: none; /* Disable pointer events on the image */
+        }
+
+   .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    z-index: 1;
+}
+
+
+
+
+ 
+
+        .arrow:hover {
+            background-color: rgba(80, 0, 0, 0.801);
+        }
+
+        .arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+    left: auto;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+ 
+   
+  <!-- Inside the <nav> tag -->
+    
+    
+    <nav>
+        <h1>INTEGRATED PIECE | قطع مدمجة</h1>
+        <ul>
+            <li><a href="#"><i class="fas fa-tv"></i> المونتاج و التصميم</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle"><i class="fas fa-book"></i> القصص▼</a>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-book"></i>الشجرة الاخيرة </a>
+                    </div>
+                </li>
+                <li style="margin-right: 20px;"><a href="#"><i class="fas fa-pen"></i> المانغا</a>
+            </li>
+            <li style="margin-right: 20px;"><a href="#"><i class="fas fa-home"></i> الرئيسية</a></li>
+        </ul>
+    </nav>
+     
+    <div class="search-container">
+        <input type="text" name="query" placeholder="..........البحث">
+        <input type="submit" value="ابحث">
+    </div>
+    
+    <div class="slider-container" onmouseenter="stopAutoSlide()" onmouseleave="startAutoSlide()">
+      <button class="arrow left" onclick="prevSlide()">&#8249;</button>
+      <div class="slider">
+          <div class="slide" draggable="false"><img src="1.jpeg" alt=""></div>
+          <div class="slide" draggable="false"><img src="2.jpg" alt=""></div>
+          <div class="slide" draggable="false"><img src="3.jpg" alt=""></div>
+      </div>
+      <button class="arrow right" onclick="nextSlide()">&#8250;</button>
+  </div>
+  
+  <script>
+  
+  document.addEventListener("DOMContentLoaded", function () {
+        var storyDropdown = document.querySelector('.dropdown');
+        var storyContent = document.querySelector('.dropdown-content');
+
+        storyDropdown.addEventListener('click', function (event) {
+            event.stopPropagation(); // Prevent the document click event from closing the dropdown
+            storyContent.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (event) {
+            var targetElement = event.target;
+
+            // Check if the clicked element is not the storyDropdown or its children
+            if (!storyDropdown.contains(targetElement) && !storyContent.contains(targetElement)) {
+                storyContent.classList.remove('show');
+            }
+        });
+    });
+      var counter = 0;
+      var totalSlides = 3;
+      var slideInterval;
+  
+      function showSlide() {
+          document.querySelector('.slider').style.transform = 'translateX(' + (-counter * 100) + '%)';
+      }
+  
+      function prevSlide() {
+          counter--;
+          if (counter < 0) {
+              counter = totalSlides - 1;
+          }
+          console.log('Prev: Counter is now ' + counter);
+          showSlide();
+      }
+  
+      function nextSlide() {
+          counter++;
+          if (counter >= totalSlides) {
+              counter = 0;
+          }
+          console.log('Next: Counter is now ' + counter);
+          showSlide();
+      }
+  
+      function startAutoSlide() {
+          slideInterval = setInterval(nextSlide, 5000);
+      }
+  
+      function stopAutoSlide() {
+          clearInterval(slideInterval);
+      }
+  
+      startAutoSlide(); // Start auto slideshow on page load
+       document.getElementById("toggleLink").addEventListener("click", function () {
+        var content = document.getElementById("contentToToggle");
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    });
+    
+  </script>
+
+
+
+
+
+<section id="section2">
+    <h2 style="text-align: right;">
+        <p>كيف يمكنني الانضمام إلى فريق العمل المختص في تطوير قطع مدمجة؟</p>
+        <p>يمكنك زيارة مجموعتنا على تطبيق تليجرام حيث يمكنك الحصول على معلومات حول كيفية الانضمام والتعرف على كل التفاصيل...</p>
+    </h2>
+     
+    <p style="text-align: left;"><a href="https://t.me/Axcemo12" target="_blank" class="icon1">TELEGRAM</a></p>
+    <p style="text-align: left;"><a href="https://www.facebook.com/" target="_blank" class="icon2">Facebook</a></p>
+    <p style="text-align: left;"><a href="https://www.instagram.com/" target="_blank" class="icon3">Instagram</a></p>
+    <p style="text-align: left;"><a href="https://twitter.com/" target="_blank" class="icon4">Twitter</a></p>
+    <p style="text-align: left;"><a href="https://www.tiktok.com/" target="_blank" class="icon5">TikTok</a></p>
+    <h2 style="text-align: left; position: absolute; top: 50px; left: 20px;">
+        تابعونا على منصات التواصل الاجتماعي
+    </h2>
+    
+
+</section>
+</body>
+</html>

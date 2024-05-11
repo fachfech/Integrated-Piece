@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player with Resolution Control</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #252323;
+            color: #fff;
+        }
+
+        video {
+            width: 80%;
+            max-width: 800px;
+        }
+
+        #controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #2f2f2f;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #000;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="video-container">
+        <video id="myVideo" controls>
+            <!-- Provide multiple sources with different resolutions -->
+            <source src="tom.mp4" type="video/mp4" data-resolution="1080p">
+            <source src="video-720p.mp4" type="video/mp4" data-resolution="720p">
+            <source src="video-480p.mp4" type="video/mp4" data-resolution="480p">
+            <source src="video-360p.mp4" type="video/mp4" data-resolution="360p">
+            <source src="video-240p.mp4" type="video/mp4" data-resolution="240p">
+            <source src="tom.mp4" type="video/mp4" data-resolution="144p">
+            Your browser does not support the video tag.
+        </video>
+
+        <div id="controls">
+            <button id="playPauseBtn">Play</button>
+            <input type="range" id="volumeRange" value="100">
+            <button id="fullscreenBtn">Fullscreen</button>
+            <select id="resolutionSelect">
+                <option value="1080p">1080p</option>
+                <option value="720p">720p</option>
+                <option value="480p">480p</option>
+                <option value="360p">360p</option>
+                <option value="240p">240p</option>
+                <option value="144p">144p</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('myVideo');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const volumeRange = document.getElementById('volumeRange');
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+            const resolutionSelect = document.getElementById('resolutionSelect');
+
+            playPauseBtn.addEventListener('click', function () {
+                if (video.paused) {
+                    video.play();
+                    playPauseBtn.textContent = 'Pause';
+                } else {
+                    video.pause();
+                    playPauseBtn.textContent = 'Play';
+                }
+            });
+
+            volumeRange.addEventListener('input', function () {
+                video.volume = volumeRange.value / 100;
+            });
+
+            fullscreenBtn.addEventListener('click', function () {
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.mozRequestFullScreen) { /* Firefox */
+                    video.mozRequestFullScreen();
+                } else if (video.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    video.webkitRequestFullscreen();
+                } else if (video.msRequestFullscreen) { /* IE/Edge */
+                    video.msRequestFullscreen();
+                }
+            });
+
+            resolutionSelect.addEventListener('change', function () {
+                const selectedResolution = resolutionSelect.value;
+                const source = document.querySelector(`source[data-resolution="${selectedResolution}"]`);
+                if (source) {
+                    video.src = source.src;
+                    video.load();
+                    video.play();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

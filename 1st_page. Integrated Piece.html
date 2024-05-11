@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Integrated Piece</title>
+    <style>
+    header video {
+      width: 30%;
+      max-width: 350px;
+      border: 2px solid #1b1919b3;
+      border-radius: 5px;
+      margin: 10px 0;
+      bottom: -1000px;
+      /* Add other styles as needed */
+    }
+p a {
+        color: #b1b1b1;
+        text-decoration: none;
+        position: relative;
+        padding-left: 20px;
+        margin-right: 20px; /* Adjust the spacing between links */
+    }
+
+    p a::before {
+    content: "";
+    width: 19px; /* Adjust the width as needed */
+    height: 19px; /* Adjust the height as needed */
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 5px;
+}
+
+
+    p a.icon1::before {
+        background: url('telegram.png') center/cover; /* Replace 'photo1.png' with the path to your first photo */
+    
+    }
+
+    p a.icon2::before {
+        background: url('facebook.png') center/cover; /* Replace 'photo2.png' with the path to your second photo */
+    }
+
+    p a.icon3::before {
+        background: url('instagram.png') center/cover; /* Replace 'photo3.png' with the path to your third photo */
+    }
+
+    p a.icon4::before {
+        background: url('Twitter-Symbole.png') center/cover; /* Replace 'photo4.png' with the path to your fourth photo */
+    }
+
+    p a.icon5::before {
+        background: url('tiktok.png') center/cover; /* Replace 'photo5.png' with the path to your fifth photo */
+    }
+
+    p a:hover {
+        color: #ff0000;
+    }
+    .design-text {
+    text-align: right; /* Align the text to the right */
+    /* Add any additional styles as needed */
+}
+
+body {
+    background-image: url('wall.jpg');
+    font-family: Arial, sans-serif;
+    background-color: #252323;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+        html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+/* Default styles for larger screens */
+nav {
+    width: 100%;
+    background-color: #000;
+    color: #2f2f2f;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    font-size: 24px; /* Adjusted for better visibility */
+    color: rgb(65, 172, 255);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px; /* Consistent spacing */
+}
+
+nav a {
+    text-decoration: none;
+    color: #c4c4c4;
+    font-weight: bold;
+    font-size: 18px; /* Larger font size */
+    transition: color 0.1s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff0000;
+}
+nav ul li:last-child {
+    margin-right: auto;
+}
+
+
+
+nav a:hover {
+    color: #ff0000;
+}
+
+nav i {
+    margin-right: auto;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav h1 {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    nav ul li,
+    nav ul li:last-child {
+        margin: 0 10px;
+    }
+}
+
+/* Dropdown styles (unchanged) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #212121;
+    z-index: 1;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out, opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 185%;
+    left: 0;
+}
+
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+    max-height: 200px;
+}
+
+.dropdown-content a {
+    color: rgb(207, 207, 207);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+
+.dropdown-content a:hover {
+    background-color: #000000;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+    opacity: 1;
+    max-height: 200px;
+}
+
+
+#section1 {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #section1 .card {
+    width: 30%; /* Adjust the width as needed */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+        #section1 .card:hover {
+            transform: scale(1.1);
+        }
+
+        #section1 .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #section1 .card-content {
+            padding: 16px;
+        }
+
+        #section1 h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        #section1 p {
+            color: #666;
+        }
+
+section {
+    margin: 5px 0;
+    padding: 40px;
+    /* Adjust the padding as needed */
+    background-color: #d5d3d3;
+    
+    box-shadow: 0 0 0px rgb(0, 0, 0);
+    color: #cfcece;
+    width: 1700px;
+}
+
+#section1 {
+    position: relative;
+    margin: 5px 0;
+    padding: 40px;
+    background-color: #252323;
+    height: 50%;
+    color: #d4d4d4;
+    width:auto;
+    top: 5px; /* Adjust the top position as needed */
+    border-radius: 40px;
+    
+}
+
+#section2 {
+    width: 100%;
+    padding: 20px; /* Adjust the padding as needed */
+    box-sizing: border-box; /* Include padding in the total width */
+    background: linear-gradient(to bottom, #040409, #071255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: right;
+    position: absolute;
+    bottom: -1500px;
+    margin-bottom: 0; /* Adjust the margin as needed */
+
+    /* Responsive styles for smaller screens */
+    @media screen and (max-width: 768px) {
+        position: relative; /* Change to relative for stacking on smaller screens */
+        bottom: -1500; /* Reset bottom */
+        margin-bottom: 20px; /* Adjust the margin for smaller screens */
+    }
+}
+
+
+
+#section3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #252323;
+    height: 70%; /* Use viewport height */
+    color: #c8c8c8;
+    width: 70%;
+    top: 300px; /* Adjust the top position as needed */
+    border-radius: 40px;
+}
+
+
+#section3 .story {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
+    background-color: #252323;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Adjust the size of the story images */
+#section3 img {
+    width: 100%; /* Ensure the image takes the full width of the container */
+    height: auto;
+}
+
+/* Hover effect for the story cards */
+#section3 .story:hover {
+    transform: scale(1.1);
+}
+
+#section3 h3 {
+    margin-top: 0;
+    color: #cacaca;
+}
+
+#section3 p {
+    color: #cfcfcf;
+}
+
+
+
+/* Add any additional styles as needed */
+
+.search-container {
+            display: flex;
+            align-items: center;
+            margin-right: 20px; /* Adjust the margin as needed */
+        }
+
+        .search-input {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            text-align: right;
+        }
+
+        .search-icon {
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            margin-left: 10px; /* Adjust the margin as needed */
+        }
+
+
+
+
+
+
+.card {
+    size: 20%; /* This property may not be standard, you might want to clarify its purpose */
+    width: 150px; /* Adjust the width as needed */
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 70%;
+    height: auto;
+    border-bottom: 0px solid #ddd;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+h3 {
+    margin-top: 0;
+    color: #d3d2d2;
+}
+
+p {
+    color: #d4d4d4;
+}
+
+nav h3 a[href=""] {
+    font-size: inherit; /* Inherit the font size from its parent element */
+}
+header video {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 700px; /* Set a maximum width if necessary */
+    border: 5px solid #1b1919b3; /* Add a border with the desired color */
+    border-radius: 40px; /* Add border-radius for rounded corners */
+    margin: 10px 0; /* Add margin to create space around the video */
+}
+
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Move avatar to the right by setting margin-left to auto */
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px; /* Add spacing between the avatar and the name */
+    margin-right: 10px; /* Adjust the margin on the right side as needed */
+}
+
+.user-profile span {
+    color: #fff;
+    font-size: 16px;
+}
+
+@media screen and (min-width: px) {
+            /* (styles for larger screens) */
+            body {
+                background-size: cover;
+            }
+
+            nav {
+                width: 100%;
+                padding: 10px;
+            }
+
+            nav h1 {
+                font-size: 18px;
+            }
+
+            nav ul {
+                flex-direction: row;
+                align-items: center;
+                margin-top: 0;
+            }
+
+            nav ul li {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+
+            .search-container {
+                margin: 0;
+            }
+
+            .search-input {
+                width: auto;
+                text-align: right;
+            }
+
+            .dropdown-content {
+                top: 10%;
+                left: 0;
+            }
+
+            #section1 .card {
+                width: 13%; /* Adjust the width as needed for larger screens */
+            }
+
+            #section3 {
+                top: 0;
+            }
+
+            #section3 .story {
+                width: 200px; /* Adjust the width as needed for larger screens */
+            }
+
+            header video {
+                width: 100%;
+                max-width: none;
+            }
+        }
+
+        /* Responsive styles for smaller screens */
+     
+    /* (styles for smaller screens) */
+    @media screen and (max-width: 1080px) {
+        body {
+            background-image: url('photo_2024-02-24_13-59-19.jpg');
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #252323;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 88.9%;
+        order: 0;
+    }
+
+    nav h1 {
+        font-size: 18px;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: right;
+    }
+
+    nav ul li,
+    nav ul li:last-child {
+        margin: 0 10px;
+    }
+
+    .search-container {
+        margin: 10px 0;
+    }
+
+    .search-input {
+        width: 100%;
+        text-align: right;
+    }
+
+    .dropdown-content {
+        top: 129%;
+        left: 0;
+    }
+
+    #section1 {
+    position: relative;
+    margin: 5px 0;
+    padding: 40px;
+    background-color: #252323;
+    height: 200%;
+    color: #d4d4d4;
+    width:auto;
+    top: 100px; /* Adjust the top position as needed */
+    border-radius: 40px;
+    
+}
+
+    #section1 .card {
+        width: 30%;
+        /* Adjust width for full width on smaller screens */
+    }
+    #section2 {
+        width:auto;
+    padding: 20px; /* Adjust the padding as needed */
+    box-sizing: border-box; /* Include padding in the total width */
+    background: linear-gradient(to bottom, #040409, #071255);
+   
+    
+    justify-content: center;
+    align-items: left;
+    text-align: right;
+    position: absolute;
+    bottom: -1900px;
+    margin-bottom: 0; 
+
+
+    }
+
+
+    #section3 {
+    display: flex;
+    align-items: center;
+    background-color: #252323;
+    height: 5%; /* Use viewport height */
+    color: #c8c8c8;
+    width: 1px;
+    top: 10px; /* Adjust the top position as needed */
+    border-radius: 40px;
+}
+
+
+/* Adjust the size of the story images */
+#section3 img {
+    width: 25%; /* Ensure the image takes the full width of the container */
+    height: 50%;
+}
+header video {
+    width: 30%; /* Adjust the width as needed */
+    max-width: 250px; /* Set a maximum width if necessary */
+    border: 2px solid #1b1919b3; /* Add a border with the desired color */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    margin: 10px 0; /* Add margin to create space around the video */
+    bottom: 200px; /* Adjust the bottom position as needed */
+}
+
+
+
+.user-profile {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.user-profile img {
+    margin-right: 120px; /* Adjust the margin as needed for spacing between image and text */
+}
+
+.design-text {
+    text-align: right;
+}
+
+
+.user-profile span {
+    color: #cdcdcd;
+    font-size: 20px;
+}
+}
+
+
+    </style>
+</head>
+
+<body>
+
+
+
+    
+     
+  
+  
+
+  
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById("autoplay-video");
+    
+            const options = {
+                root: null, // Use the viewport as the root
+                rootMargin: "0px",
+                threshold: 0.5 // Play the video when 50% of it is visible
+            };
+    
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        video.play(); // Play the video when it becomes visible
+                    } else {
+                        video.pause(); // Pause the video when it goes out of view
+                    }
+                });
+            }, options);
+    
+            observer.observe(video);
+        });
+    </script>
+    
+
+
+<nav>
+    <!-- (existing nav content) -->
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="........ابحث">
+        <i class="fas fa-search search-icon"></i>
+    </div>
+
+    <h1>INTEGRATED PIECE | قطع مدمجة</h1>
+    <ul>
+        <li><a href="#"><i class="fas fa-tv"></i> المونتاج و 
+            التصميم</a></li>
+     
+       
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle"><i class="fas fa-book"></i> القصص▼</a>
+            <div class="dropdown-content">
+                <a href="الشجرة الاخيرة.html"></i>الشجرة الاخيرة</a>
+            </div>
+        </li> <li style="margin-right: 20px;"><a href="#"><i class="fas fa-pen"></i> المانغا</a></li>
+        <li style="margin-right: 20px;"><a href="#"><i class="fas fa-home"></i> الرئيسية</a></li>
+    </ul>
+</nav>
+
+<section id="section2">
+    <h2 style="text-align: right;">
+        <p>كيف يمكنني الانضمام إلى فريق العمل المختص في تطوير قطع مدمجة؟</p>
+       
+        <p>يمكنك زيارة مجموعتنا على تطبيق تليجرام حيث يمكنك الحصول على معلومات حول كيفية الانضمام والتعرف على كل التفاصيل.    تابعونا على منصات التواصل الاجتماعية للمزيد من المعلومات</p>
+    </h2>
+     
+    <p style="text-align: left;"><a href="https://t.me/Axcemo12" target="_blank" class="icon1">TELEGRAM</a></p>
+    <p style="text-align: left;"><a href="https://www.facebook.com/" target="_blank" class="icon2">Facebook</a></p>
+    <p style="text-align: left;"><a href="https://www.instagram.com/" target="_blank" class="icon3">Instagram</a></p>
+    <p style="text-align: left;"><a href="https://twitter.com/" target="_blank" class="icon4">Twitter</a></p>
+    <p style="text-align: left;"><a href="https://www.tiktok.com/" target="_blank" class="icon5">TikTok</a></p>
+    <h2 style="text-align: left; position: absolute; top: 50px; left: 20px;">
+        
+    </h2>
+    
+</section>
+<section id="section1">
+<div class="card">
+    <img src="manga1.jpg" alt="Manga 1">
+    <div class="card-content">
+        <h3>Manga Title 1</h3>
+        <p>Description of Manga 1.</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="manga2.webp" alt="Manga 2">
+    <div class="card-content">
+        <h3>Manga Title 2</h3>
+        <p>Description of Manga 2.</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="manga3.jpg" alt="Manga 3">
+    <div class="card-content">
+        <h3>Manga Title 3</h3>
+        <p>Description of Manga 3.</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="manga4.jpg" alt="Manga 4">
+    <div class="card-content">
+        <h3>Manga Title 4</h3>
+        <p>Description of Manga 4.</p>
+    </div>
+</div>
+    <div class="card">
+        <img src="manga5.jpg" alt="Manga 5">
+        <div class="card-content">
+            <h3>Manga Title 5</h3>
+            <p>Description of Manga 5.</p>
+        </div>
+</div>
+<div class="card">
+    <img src="manga6.jpg" alt="Manga 5">
+    <div class="card-content">
+        <h3>Manga Title 5</h3>
+        <p>Description of Manga 5.</p>
+    </div>
+</div>
+
+</section>
+
+<section id="section3">
+    <div class="story">
+        <img src="story1.jpg" alt="Story 1">
+        <h5>Story 1</h5>
+        <p>Description of Story 1.</p>
+    </div>
+    <div class="story">
+        <img src="story2.jpg" alt="Story 2">
+        <h5>Story 2</h5>
+        <p>Description of Story 2.</p>
+    </div>
+    <div class="story">
+        <img src="story3.jpg" alt="Story 3">
+        <h5>Story 3</h5>
+        <p>Description of Story 3.</p>
+    </div>
+    <div class="story">
+        <img src="story4.jpg" alt="Story 4">
+        <h5>Story 4</h5>
+        <p>Description of Story 4.</p>
+    </div>
+</section>
+<header>
+    <!-- ... (other header elements) ... -->
+    <div class="user-profile">
+        <img src="story1.jpg" alt="User Avatar">
+        <span class="design-text">تصميم جديد</span>
+
+    </div>
+   
+    <video controls autoplay style="width: 700px;">
+        <video id="autoplay-video" controls loop muted></video>
+        <source src="video_2024-02-22_20-43-43.mp4" type="video/mp4">
+        <source src="sample-video.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video> 
+    
+    
+</header>
+<!-- Inside the header -->
+
+
+        
+
+
+   
+        <!-- More video articles can be added here -->
+ <script>
+    // JavaScript code goes here
+    document.addEventListener("DOMContentLoaded", function() {
+      var video = document.getElementById("autoplay-video");
+
+      var options = {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px",
+        threshold: 0.5 // Play the video when 50% of it is visible
+      };
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            video.play(); // Play the video when it becomes visible
+          } else {
+            video.pause(); // Pause the video when it goes out of view
+          }
+        });
+      }, options);
+
+      observer.observe(video);
+    });
+  </script>
+
+  
+
+    <script src="script.js">document.addEventListener('DOMContentLoaded', function () {
+        const videos = document.querySelectorAll('.video');
+    
+        videos.forEach(video => {
+            video.addEventListener('click', () => {
+                // Add logic to play the video or redirect to a detailed video page
+                alert('Video clicked!');
+            });
+        });
+    });
+    <!-- Add the following script to your HTML file -->
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const mangaCards = document.querySelectorAll('#section1 .card');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            mangaCards.forEach(card => {
+                card.style.display = 'none';
+            });
+
+            mangaCards[index].style.display = 'block';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % mangaCards.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + mangaCards.length) % mangaCards.length;
+            showSlide(currentSlide);
+        }
+
+        // Initial display
+        showSlide(currentSlide);
+
+        // Set up event listeners for next and previous buttons
+        const nextButton = document.getElementById('nextButton');
+        const prevButton = document.getElementById('prevButton');
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+    });
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Your existing head content -->
+
+    <style>
+        /* ... (your existing styles) */
+
+        .crunchyroll-slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .crunchyroll-slider {
+            display: flex;
+            transition: transform 1s ease-in-out;
+            width: 300%; /* Adjust the width based on the number of slides */
+        }
+
+        .crunchyroll-slide {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        .crunchyroll-slide img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Add border radius for rounded corners */
+        }
+
+        .crunchyroll-arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+            z-index: 1;
+        }
+
+        .crunchyroll-arrow:hover {
+            background-color: rgba(80, 0, 0, 0.801);
+        }
+
+        .crunchyroll-arrow.left {
+            left: 10px;
+        }
+
+        .crunchyroll-arrow.right {
+            right: 10px;
+            left: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Your existing body content -->
+
+    <div class="crunchyroll-slider-container">
+        <button class="crunchyroll-arrow left" onclick="prevCrunchyrollSlide()">&#8249;</button>
+        <div class="crunchyroll-slider">
+            <div class="crunchyroll-slide" draggable="false"><img src="1.jpeg" alt=""></div>
+            <div class="crunchyroll-slide" draggable="false"><img src="2.jpg" alt=""></div>
+            <div class="crunchyroll-slide" draggable="false"><img src="3.jpg" alt=""></div>
+        </div>
+        <button class="crunchyroll-arrow right" onclick="nextCrunchyrollSlide()">&#8250;</button>
+    </div>
+
+    <!-- Your existing script for the regular slideshow -->
+
+    <script>
+        // Your existing script
+    </script>
+
+    <script>
+        var crunchyrollCounter = 0;
+        var totalCrunchyrollSlides = 3;
+
+        function showCrunchyrollSlide() {
+            document.querySelector('.crunchyroll-slider').style.transform = 'translateX(' + (-crunchyrollCounter * 100) + '%)';
+        }
+
+        function prevCrunchyrollSlide() {
+            crunchyrollCounter--;
+            if (crunchyrollCounter < 0) {
+                crunchyrollCounter = totalCrunchyrollSlides - 1;
+            }
+            showCrunchyrollSlide();
+        }
+
+        function nextCrunchyrollSlide() {
+            crunchyrollCounter++;
+            if (crunchyrollCounter >= totalCrunchyrollSlides) {
+                crunchyrollCounter = 0;
+            }
+            showCrunchyrollSlide();
+        }
+    </script>
+
+</body>
+
+</html>
